@@ -1,0 +1,43 @@
+@include mobile {
+  .modal {
+
+    &__title {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    &__footer {
+      flex-direction: column;
+      row-gap: 15px;
+    }
+
+    .form {
+      &__fieldset {
+        padding: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: unset;
+      }
+
+      &__data:last-child {
+        grid-column: unset;
+        grid-row: unset;
+      }
+
+      &__button {
+        padding: 10px;
+      }
+
+      &__data_textarea {
+        grid-column: unset;
+        grid-row: 2 / 4;
+      }
+
+      &__label + #discount {
+        display: inline-block;
+        width: calc(100% - 50px);
+        vertical-align: top;
+        margin-left: 6px;
+      }
+    }
+  }
+}

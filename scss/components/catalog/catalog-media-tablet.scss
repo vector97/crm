@@ -1,0 +1,25 @@
+@include tablet {
+    .catalog {
+      &__title {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      &__control {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      &__filter-btn {
+        justify-content: center;
+      }
+
+      &__control-btn {
+        margin-left: 0;
+      }
+
+      .search {
+        flex: unset;
+      }
+    }
+}

@@ -1,0 +1,59 @@
+@include tablet {
+  .modal {
+    padding: 0;
+
+    &__window {
+      padding: 50px 20px;
+    }
+
+    &__close {
+      left: 20px;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &__product-edit {
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__footer {
+      padding: 0 20px;
+    }
+
+    .form {
+      &__fieldset {
+        padding: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: unset;
+      }
+
+      &__data:last-child {
+        grid-column: unset;
+        grid-row: unset;
+      }
+
+      &__button {
+        padding: 10px;
+      }
+
+      &__data_textarea {
+        grid-column: unset;
+        grid-row: 2 / 4;
+      }
+
+      &__label + #discount {
+        display: inline-block;
+        width: calc(100% - 50px);
+        vertical-align: top;
+        margin-left: 6px;
+      }
+    }
+  }
+}

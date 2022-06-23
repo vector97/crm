@@ -1,0 +1,21 @@
+@include mobile {
+    .catalog {
+      &__title {
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .catalog__cost {
+        text-align: right;
+
+        span {
+          display: block;
+        }
+      }
+
+
+      &__settings {
+        justify-content: center;
+      }
+    }
+}
