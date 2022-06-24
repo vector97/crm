@@ -1,6 +1,8 @@
 'use strict';
 
+const openModalBtn = document.querySelector('.catalog__control-btn');
 const modal = document.querySelector('.modal');
+const closeModalBtn = modal.querySelector('.modal__close');
 const title = modal.querySelector('.modal__title');
 const productID = modal.querySelector('.modal__product-id');
 const productEditBtn = modal.querySelector('.modal__product-edit');
@@ -8,6 +10,20 @@ const productForm = modal.querySelector('.modal__form');
 const productCheckbox = modal.querySelector('#check');
 const productDiscount = modal.querySelector('#discount');
 const productCost = modal.querySelector('.modal__value');
+
+openModalBtn.addEventListener('click', () => {
+  modal.classList.add('modal_open');
+});
+
+closeModalBtn.addEventListener('click', (e) => {
+  modal.classList.remove('modal_open');
+});
+
+modal.addEventListener('click', (e) => {
+  if (!e.target.closest('.modal__window')) {
+    modal.classList.remove('modal_open');
+  }
+});
 
 const products = [
   {
