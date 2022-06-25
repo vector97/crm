@@ -694,14 +694,14 @@ iframe {
   overflow: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  display: flex;
+  display: none;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: transform 0.2s ease 0s;
-  transform: scale(0); }
+  background-color: rgba(0, 0, 0, 0.5); }
+  .modal_open {
+    display: flex; }
   .modal__wrapper {
     margin: auto;
     width: 100%;
@@ -716,7 +716,11 @@ iframe {
     max-width: 100%;
     overflow: visible;
     padding: 36px 106px;
-    position: relative; }
+    position: relative;
+    transition: transform .5s ease 0s;
+    transform: scale(0); }
+    .modal__window_open {
+      transform: scale(1); }
   .modal__close {
     border: none;
     background-color: inherit;
@@ -784,8 +788,6 @@ iframe {
     transition: all .2s ease; }
     .modal__button:hover {
       background-color: #6E6893; }
-  .modal_open {
-    transform: scale(1); }
   .modal .form__fieldset {
     background-color: #ffffff;
     border: none;

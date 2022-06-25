@@ -7,14 +7,16 @@
   overflow: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  display: flex;
+  display: none;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
   padding: 10px;
   background-color: rgba(0, 0, 0, .5);
-  transition: transform 0.2s ease 0s;
-  transform: scale(0);
+
+  &_open {
+    display: flex;
+  }
 
   &__wrapper {
     margin: auto;
@@ -33,6 +35,12 @@
     overflow: visible;
     padding: 36px 106px;
     position: relative;
+    transition: transform .5s ease 0s;
+    transform: scale(0);
+
+    &_open {
+      transform: scale(1);
+    }
   }
 
   &__close {
@@ -124,10 +132,6 @@
     &:hover {
       background-color: $default-color;
     }
-  }
-
-  &_open {
-    transform: scale(1);
   }
 
   .form {
