@@ -25,7 +25,7 @@
         <div class="catalog__header">
           <h2 class="catalog__title">CRM</h2>
 
-          <p class="catalog__cost">Итоговая стоимость: <span class="catalog__value">$ 900.00</span></p>
+          <p class="catalog__cost">Итоговая стоимость: <span class="catalog__value">$ 0.00</span></p>
         </div>
         <!-- /.catalog__header -->
 
@@ -111,7 +111,7 @@
           <h2 class="modal__title">Добавить товар</h2>
 
           <div class="modal__product-info">
-            <p class="modal__product-id">id: 201910241</p>
+            <p class="modal__product-id">id: <span class="vendor-code__id">201910241</span></p>
             <button class="modal__product-edit"><img src="./img/modal-form/edit.svg" alt="Изменить id"></button>
           </div>
           <!-- /.modal__product-info -->
@@ -122,45 +122,45 @@
           <fieldset class="form__fieldset">
             <div class="form__data">
               <label class="form__label" for="name">Наименование</label>
-              <input class="form__input" type="text" id="name" name="Наименование">
+              <input class="form__input" type="text" id="name" name="title" required>
             </div>
             <!-- /.form__data -->
 
             <div class="form__data form__data_textarea">
               <label class="form__label" for="description">Описание</label>
-              <textarea class="form__textarea" id="description" name="Описание"></textarea>
+              <textarea class="form__textarea" id="description" name="Описание" required></textarea>
             </div>
             <!-- /.form__data /.form__data_textarea -->
 
             <div class="form__data">
               <label class="form__label" for="category">Категория</label>
-              <input class="form__input" type="text" id="category" name="Категория">
+              <input class="form__input" type="text" id="category" name="category" required>
             </div>
             <!-- /.form__data -->
 
             <div class="form__data">
               <label class="form__label" for="measure">Единицы измерения</label>
-              <input class="form__input" type="text" id="measure" name="Единицы измерения">
+              <input class="form__input" type="text" id="measure" name="units" required>
             </div>
             <!-- /.form__data -->
 
             <div class="form__data">
               <label class="form__label" for="sum">Количество</label>
-              <input class="form__input" type="number" id="sum" name="Количество">
+              <input class="form__input" type="number" id="sum" name="count" required>
             </div>
             <!-- /.form__data -->
 
             <div class="form__data">
               <label class="form__label" for="discount">Дисконт</label>
-              <input class="form__input custom-checkbox" type="checkbox" id="check" name="Дисконт" checked>
+              <input class="form__input custom-checkbox" type="checkbox" id="check" name="Дисконт">
               <label class="form__label" for="check"></label>
-              <input class="form__input" type="text" id="discount" name="Дисконт">
+              <input class="form__input" type="text" id="discount" name="Дисконт" disabled required>
             </div>
             <!-- /.form__data -->
 
             <div class="form__data">
               <label class="form__label" for="price">Цена</label>
-              <input class="form__input" type="number" id="price" name="Цена">
+              <input class="form__input" type="number" id="price" name="price" required>
             </div>
             <!-- /.form__data -->
 
@@ -177,7 +177,7 @@
           <!-- /.form__fieldset -->
 
           <div class="modal__footer">
-            <p class="modal__cost">Итоговая стоимость: <span class="modal__value">$ 900.00</span></p>
+            <p class="modal__cost">Итоговая стоимость: <span class="modal__value">$ 0.00</span></p>
             <button class="modal__button" type="submit">Добавить товар</button>
           </div>
           <!-- /.modal__footer -->
