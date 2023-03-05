@@ -253,6 +253,10 @@
       width: calc(100% - 50px);
       vertical-align: top;
       margin-left: 6px;
+
+      &:disabled {
+        background-color: $field-disabled-color;
+      }
     }
 
     &__textarea {
