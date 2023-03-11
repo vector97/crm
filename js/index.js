@@ -1,14 +1,7 @@
 import getElements from './modules/elements.js';
-import openModal from './modules/modalControl.js';
+import modalControl from './modules/modalControl.js';
 import deleteProduct from './modules/productControl.js';
-import {
-  calculateTotalPrice,
-  renderGoods,
-} from './modules/render.js';
-const {
-  tableBody,
-  openModalBtn,
-} = getElements();
+import render from './modules/render.js';
 
 const products = [
   {
@@ -50,6 +43,16 @@ const products = [
 ];
 
 const init = () => {
+  const {
+    calculateTotalPrice,
+    renderGoods,
+  } = render();
+  const {
+    tableBody,
+    openModalBtn,
+  } = getElements();
+  const { openModal } = modalControl();
+
   renderGoods(products);
   calculateTotalPrice(products);
 
