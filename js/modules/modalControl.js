@@ -1,4 +1,4 @@
-import products from '../index.js';
+import { products } from '../data.js';
 import getElements from './elements.js';
 import render from './render.js';
 

@@ -1,46 +1,9 @@
 import getElements from './modules/elements.js';
 import modalControl from './modules/modalControl.js';
-import deleteProduct from './modules/productControl.js';
+import { deleteProduct, getProductPreview } from './modules/productControl.js';
 import render from './modules/render.js';
 
-const products = [
-  {
-    'id': 246016548,
-    'title': 'Навигационная система Soundmax',
-    'category': 'Техника для дома',
-    'units': 'шт',
-    'count': 5,
-    'price': 100,
-    'sum': 500,
-  },
-  {
-    'id': 937295527,
-    'title': 'Настольная игра “На 4-х ногах”',
-    'category': 'Настольные игры',
-    'units': 'шт',
-    'count': 12,
-    'price': 14,
-    'sum': 168,
-  },
-  {
-    'id': 246016549,
-    'title': 'Навигационная система Soundmax',
-    'category': 'Техника для дома',
-    'units': 'шт',
-    'count': 5,
-    'price': 100,
-    'sum': 500,
-  },
-  {
-    'id': 246016550,
-    'title': 'Навигационная система Soundmax',
-    'category': 'Техника для дома',
-    'units': 'шт',
-    'count': 5,
-    'price': 100,
-    'sum': 500,
-  },
-];
+import { products } from './data.js';
 
 const init = () => {
   const {
@@ -51,7 +14,7 @@ const init = () => {
     tableBody,
     openModalBtn,
   } = getElements();
-  const { openModal } = modalControl();
+  const {openModal} = modalControl();
 
   renderGoods(products);
   calculateTotalPrice(products);
@@ -63,8 +26,21 @@ const init = () => {
   tableBody.addEventListener('click', e => {
     deleteProduct(e, products);
   });
+
+  // предпросмотр товара
+  setTimeout(() => {
+    const previewBtns = document.querySelectorAll('.table__data-btn_preview');
+
+    previewBtns.forEach(previewBtn => {
+      previewBtn.addEventListener('click', () => {
+        previewBtns.forEach(btn => {
+          if (previewBtn === btn) {
+            getProductPreview(previewBtn);
+          }
+        });
+      });
+    });
+  }, 0);
 };
 
 init();
-
-export default products;

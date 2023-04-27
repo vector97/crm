@@ -21,7 +21,7 @@ const render = () => {
     <td class="table__data table__data_cost">$${price}</td>
     <td class="table__data table__data_sum">$${count * price}</td>
     <td class="table__data table__data_buttons">
-      <button class="table__data-btn" type="button">
+      <button class="table__data-btn table__data-btn_preview" type="button" data-pic="https://img.mvideo.ru/Pdb/11031179b.jpg">
         <img src="./img/catalog/table__no-image.svg" alt="Без изображения">
       </button>
       <button class="table__data-btn" type="button">
